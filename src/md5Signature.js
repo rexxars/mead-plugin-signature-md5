@@ -10,9 +10,8 @@ module.exports = {
 
 function md5Signer(req, res, next) {
   const conf = res.locals
-  const sourceConfig = conf.source.config || {}
   const adapterRequiresSignedUrls = conf.sourceAdapter.requiresSignedUrls
-  const token = sourceConfig.secureUrlToken
+  const token = conf.source.secureUrlToken
 
   if (adapterRequiresSignedUrls && !token) {
     return next(Boom.badImplementation(
