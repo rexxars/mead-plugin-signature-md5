@@ -1,6 +1,6 @@
 {
   "name": "mead-plugin-signature-md5",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mead plugin that verifies signed URLs using MD5",
   "main": "src/md5Signature.js",
   "scripts": {
